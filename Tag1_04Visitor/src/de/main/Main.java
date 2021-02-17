@@ -14,11 +14,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		
-		List<String> liste = Arrays.asList("eins","zwei","drei","vier");
-		
-		
-		liste.forEach(System.out::println);
-		
+			
 		
 		Firma firma = new Firma();
 		
