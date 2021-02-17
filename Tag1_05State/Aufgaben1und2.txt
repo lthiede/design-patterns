@@ -1,0 +1,22 @@
+Aufgabe 1.
+
+Erstellen Sie eine Klasse TrafficLight mit den Methoden
+
+public String getActualColor();
+
+und 
+
+public void nextColor();
+
+Die Ampel soll eine Fussgängerampel mit den Status "Rot" und "Gruen" repräsentieren.
+
+Die Zustaende der Ampel soll ueber zwei TrafficLightState Object "RedState" und "GreenState" abgebildet werden.
+
+
+
+
+Aufgabe 2
+
+Erweitern Sie die Ampel um den Zustand "OffState" und den Methoden "switchOn()" und "switchOff"
+
+Bei ausgeschalteter Ampel machen die Methoden "getActualColor" und "nextColor" keinen Sinn
