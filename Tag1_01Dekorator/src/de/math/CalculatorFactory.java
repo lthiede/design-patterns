@@ -6,6 +6,7 @@ public class CalculatorFactory {
 	
 	private static boolean logger = true;
 	private static boolean secure = true;
+	private static boolean benchmark = true;
 	
 	
 	public static Calculator create() {
@@ -16,6 +17,9 @@ public class CalculatorFactory {
 		
 		if(secure)
 			retval = new CalculatorSecure(retval);
+				
+		if(benchmark)
+			retval = new CalculatorBenchmark(retval);
 				
 		
 		return retval;

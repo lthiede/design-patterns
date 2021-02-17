@@ -18,15 +18,7 @@ public class Application {
 	public static void main(String[] args) {
 
 		
-		Instant start = Instant.now();
 		
-		// zu messende Operation
-		
-		
-		Instant ende = Instant.now();
-		
-		Duration duration = Duration.between(start, ende);
-		System.out.println(duration.toMillis());
 		
 		
 		
