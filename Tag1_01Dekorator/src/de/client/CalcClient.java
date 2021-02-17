@@ -2,11 +2,20 @@ package de.client;
 
 import de.math.Calculator;
 
+
 public class CalcClient {
 
-	public static void main(String[] args) {
-		Calculator calc = new Calculator();
-		System.out.println(calc.add(3, 4));
+	private final Calculator calculator;
+	
+	
+	public CalcClient(final Calculator calculator) {
+		this.calculator = calculator;
+	}
+
+
+	public  void run() {
+		
+		System.out.println(calculator.add(3, 4));
 
 	}
 
