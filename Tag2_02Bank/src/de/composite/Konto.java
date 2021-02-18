@@ -1,8 +1,10 @@
 package de.composite;
 
+import de.composite.visitors.KontenVisitor;
+
 public class Konto extends AbstractBankNode {
 
-	private double salso = 0;
+	private double salso = 1000;
 	
 	public Konto(String label) {
 		super(label);
@@ -28,6 +30,9 @@ public class Konto extends AbstractBankNode {
 		return builder.toString();
 	}
 	
-
+	public void accept(KontenVisitor visitor) {
+		// Der Trick ist, dass die this-Referenz vom ricjtigen Typ ist (Hier Konto)
+		visitor.visit(this);
+	}
 	
 }

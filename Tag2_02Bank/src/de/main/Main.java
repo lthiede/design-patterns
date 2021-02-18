@@ -1,11 +1,10 @@
 package de.main;
 
-import java.util.Iterator;
-import java.util.List;
-
-import de.composite.AbstractBankNode;
 import de.composite.Konto;
 import de.composite.KontoGruppe;
+import de.composite.visitors.PrintVisitor;
+import de.composite.visitors.SummenVisitor;
+import de.composite.visitors.ZinsenVisitor;
 
 public class Main {
 
@@ -34,6 +33,19 @@ public class Main {
 
 		Konto e2_2_2 = new Konto("E2_2_2");
 		e1_2.append(e2_2_2);
+		
+		Konto e2_2_3 = new Konto("E2_2_3");
+		e1_2.append(e2_2_3);
+		
+		Konto e2_2_4 = new Konto("E2_2_4");
+		e1_2.append(e2_2_4);
+		
+		root.iterate(new PrintVisitor());
+		root.iterate(new ZinsenVisitor(1.02));
+		root.iterate(new PrintVisitor());
+		
+		
+		root.iterate( new SummenVisitor());
 		
 		
 

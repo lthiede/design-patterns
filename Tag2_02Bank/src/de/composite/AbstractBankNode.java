@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import de.composite.visitors.KontenVisitor;
+
 public abstract class AbstractBankNode {
 	
 	private AbstractBankNode parent = null;
@@ -67,6 +69,23 @@ public abstract class AbstractBankNode {
 		return liste.iterator();
 				
 	}
+	
+	// Ist nur dazu da um das Casten der Zeiger zu vermeiden
+	public abstract void accept(KontenVisitor visitor);
+	
+	
+	public void iterate(KontenVisitor visitor) {
+		
+		visitor.init();
+		
+		Iterator<AbstractBankNode> it = iterator();
+		while(it.hasNext()) {
+			it.next().accept(visitor);
+		}
+		
+		visitor.close();
+	}
+	
 	
 	private void iteratorHelper(List<AbstractBankNode> list) {
 		// Liste mit sich selbst und allen Kindern und Kindeskindern füllen

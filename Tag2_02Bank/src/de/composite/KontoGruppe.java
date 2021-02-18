@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import de.composite.visitors.KontenVisitor;
+
 public class KontoGruppe extends AbstractBankNode{
 	
 	private List<AbstractBankNode> children = new ArrayList<>();
@@ -40,6 +42,9 @@ public class KontoGruppe extends AbstractBankNode{
 		return builder.toString();
 	}
 
-	
+	public void accept(KontenVisitor visitor) {
+		// Der Trick ist, dass die this-Referenz vom ricjtigen Typ ist (Hier KontoGruppe)
+		visitor.visit(this);
+	}
 
 }
