@@ -2,12 +2,12 @@ package de.mitarbeiter;
 
 import de.mitarbeiter.vistors.MitarbeiterVisitor;
 
-public class LohnEmpfänger extends AbstractMitarbeiter {
+public class LohnEmpfaenger extends AbstractMitarbeiter {
 	
 	private double arbeitszeit = 36 * 4;
 	private double stundenlohn = 12.5;
 
-	public LohnEmpfänger(String name) {
+	public LohnEmpfaenger(String name) {
 		super(name);
 		// TODO Auto-generated constructor stub
 	}
@@ -23,7 +23,8 @@ public class LohnEmpfänger extends AbstractMitarbeiter {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("LohnEmpfänger [arbeitszeit=");
+		builder.append("LohnEmpfae"
+				+ "nger [arbeitszeit=");
 		builder.append(arbeitszeit);
 		builder.append(", stundenlohn=");
 		builder.append(stundenlohn);

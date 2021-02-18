@@ -1,19 +1,20 @@
 package de.mitarbeiter.vistors;
 
-import de.mitarbeiter.GehaltsEmpfänger;
-import de.mitarbeiter.LohnEmpfänger;
+import de.mitarbeiter.GehaltsEmpfaenger;
+import de.mitarbeiter.LohnEmpfaenger;
+
 
 public class PrintVisitor implements MitarbeiterVisitor{
 
 	@Override
-	public void vistit(GehaltsEmpfänger gehaltsEmpfänger) {
-		System.out.println(gehaltsEmpfänger);
+	public void vistit(GehaltsEmpfaenger gehaltsEmpfaenger) {
+		System.out.println(gehaltsEmpfaenger);
 		
 	}
 
 	@Override
-	public void vistit(LohnEmpfänger lohnEmpfänger) {
-		System.out.println(lohnEmpfänger);
+	public void vistit(LohnEmpfaenger lohnEmpfaenger) {
+		System.out.println(lohnEmpfaenger);
 		
 	}
 

@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.function.Consumer;
 
 import de.firma.Firma;
-import de.mitarbeiter.GehaltsEmpfänger;
-import de.mitarbeiter.LohnEmpfänger;
+import de.mitarbeiter.GehaltsEmpfaenger;
+import de.mitarbeiter.LohnEmpfaenger;
 import de.mitarbeiter.vistors.PrintVisitor;
 
 public class Main {
@@ -18,11 +18,11 @@ public class Main {
 		
 		Firma firma = new Firma();
 		
-		firma.add(new GehaltsEmpfänger("Schmidt"));
-		firma.add(new GehaltsEmpfänger("Mayer"));
-		firma.add(new LohnEmpfänger("Hinz"));
-		firma.add(new LohnEmpfänger("Kunz"));
-		firma.add(new GehaltsEmpfänger("Schulz"));
+		firma.add(new GehaltsEmpfaenger("Schmidt"));
+		firma.add(new GehaltsEmpfaenger("Mayer"));
+		firma.add(new LohnEmpfaenger("Hinz"));
+		firma.add(new LohnEmpfaenger("Kunz"));
+		firma.add(new GehaltsEmpfaenger("Schulz"));
 
 		//firma.print();
 		firma.iterate(new PrintVisitor());

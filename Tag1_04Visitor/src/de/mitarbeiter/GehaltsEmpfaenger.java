@@ -2,12 +2,12 @@ package de.mitarbeiter;
 
 import de.mitarbeiter.vistors.MitarbeiterVisitor;
 
-public class GehaltsEmpfänger extends AbstractMitarbeiter {
+public class GehaltsEmpfaenger extends AbstractMitarbeiter {
 	
 	
 	private double gehalt = 1000;
 
-	public GehaltsEmpfänger(String name) {
+	public GehaltsEmpfaenger(String name) {
 		super(name);
 		
 	}
@@ -23,7 +23,7 @@ public class GehaltsEmpfänger extends AbstractMitarbeiter {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("GehaltsEmpfänger [gehalt=");
+		builder.append("GehaltsEmpfaenger [gehalt=");
 		builder.append(gehalt);
 		builder.append(", Name=");
 		builder.append(getName());
