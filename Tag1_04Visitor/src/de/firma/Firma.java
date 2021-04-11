@@ -48,17 +48,13 @@ public class Firma {
         fireEmployeeNumberChangedEvent(-1);
 		return mitarbeiters.remove(mitarbeiter);
 	}
-	
-//	public void print() {
-//		for (AbstractMitarbeiter mitarbeiter : mitarbeiters) {
-//			System.out.println(mitarbeiter);
-//		}
-//	}
-	
+
 	public void iterate(MitarbeiterVisitor visitor) {
+
 		for (AbstractMitarbeiter mitarbeiter : mitarbeiters) {
 			mitarbeiter.accept(visitor);
 		}
+		visitor.finish(); // Neu: finish Methode für Operationen nach der Iteration
 	}
 
 }

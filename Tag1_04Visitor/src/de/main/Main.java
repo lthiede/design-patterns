@@ -6,6 +6,7 @@ import de.listeners.ChangeListener;
 import de.mitarbeiter.GehaltsEmpfaenger;
 import de.mitarbeiter.LohnEmpfaenger;
 import de.mitarbeiter.vistors.PrintVisitor;
+import de.mitarbeiter.vistors.StatistikVisitor;
 
 public class Main {
 
@@ -37,9 +38,9 @@ public class Main {
 		firma.add(schulz);
 		firma.remove(mayer);
 
-		//firma.print();
 		firma.iterate(new PrintVisitor());
 
+		firma.iterate(new StatistikVisitor()); // Aufgabe 3: Statistik Visitor aus
 
 	}
 

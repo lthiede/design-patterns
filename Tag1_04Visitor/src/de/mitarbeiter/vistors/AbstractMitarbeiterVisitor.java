@@ -8,15 +8,20 @@ public abstract class AbstractMitarbeiterVisitor implements MitarbeiterVisitor{
 
 
 	@Override
-	public void vistit(GehaltsEmpfaenger gehaltsEmpfaenger) {
+	public void visit(GehaltsEmpfaenger gehaltsEmpfaenger) {
 		// Ok
 
 	}
 
 	@Override
-	public void vistit(LohnEmpfaenger lohnEmpfaenger) {
+	public void visit(LohnEmpfaenger lohnEmpfaenger) {
 		// Ok
 
+	}
+
+	@Override
+	public  void finish(){
+		// Ok
 	}
 
 }
