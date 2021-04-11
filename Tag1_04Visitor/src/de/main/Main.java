@@ -15,6 +15,10 @@ public class Main {
 		AddListener addListener = new AddListener();
 		ChangeListener changeListener = new ChangeListener();
 
+		/*
+		Add listeners to the list of listeners
+		The Lambda Expressions implement the function EmployeeNumberChangedListener interface
+		 */
 		firma.addEmployeeNumberChangedListener(e->addListener.greetAddedEmployee(e));
 		firma.addEmployeeNumberChangedListener(e->changeListener.updateEmployeeNumber(e));
 

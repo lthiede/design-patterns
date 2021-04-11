@@ -10,6 +10,7 @@ public class ChangeListener {
         this.employeeNumber = 0;
     }
 
+    // Update number of employees when an event is received
     public void updateEmployeeNumber(EmployeeNumberChangedEvent employeeNumberChangedEvent) {
         setEmployeeNumber(getEmployeeNumber() + employeeNumberChangedEvent.getChange());
         System.out.println(new StringBuilder().append("current Number of Employees: ").append(getEmployeeNumber()).toString());
