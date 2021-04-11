@@ -5,8 +5,8 @@ import de.mitarbeiter.LohnEmpfaenger;
 
 
 public interface MitarbeiterVisitor {
-	
-	void vistit(GehaltsEmpfaenger gehaltsEmpfaenger);
-	void vistit(LohnEmpfaenger lohnEmpfaenger);
 
+	void finish(); // finish methode die nach Iteration aufgerufen wird, vgl. Firma.iterate ()
+	void visit(GehaltsEmpfaenger gehaltsEmpfaenger);
+	void visit(LohnEmpfaenger lohnEmpfaenger);
 }

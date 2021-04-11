@@ -33,7 +33,7 @@ public class GehaltsEmpfaenger extends AbstractMitarbeiter {
 
 	@Override
 	public void accept(MitarbeiterVisitor visitor) {
-		visitor.vistit(this);
+		visitor.visit(this);
 		
 	}
 
