@@ -6,6 +6,7 @@ public class GreenState extends AbstractState {
         super(ampel);
     }
 
+    // overwrite required base methods with greenState behavior
     // Aufgabe 1
     @Override
     public String getActualColor() {

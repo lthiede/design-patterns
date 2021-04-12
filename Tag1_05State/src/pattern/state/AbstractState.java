@@ -11,6 +11,8 @@ public class AbstractState implements State{
 	public Ampel getAmpel() {
 		return ampel;
 	}
+
+	// overwrite state interface and set defaults
 	// Aufgabe 1
 	@Override
 	public String getActualColor() {
